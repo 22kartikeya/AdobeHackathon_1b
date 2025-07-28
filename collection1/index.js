@@ -7,11 +7,11 @@ const PDF_DIR = "./collection1_input";
 const OUTPUT_DIR = "./collection1_output";
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "final_output.json");
 
-// Load configuration
+
 const inputConfig = JSON.parse(fs.readFileSync(INPUT_JSON_PATH, "utf-8"));
 const { documents, persona, job_to_be_done } = inputConfig;
 
-// Define keyword scoring logic
+
 const KEYWORDS = [
     "travel", "trip", "group", "friends", "hotel", "restaurant", "food",
     "nightlife", "activity", "things to do", "packing", "coast", "fun", "adventure"
@@ -67,7 +67,7 @@ async function extractFromPDF(filepath) {
         allSections.push(...sections);
     }
 
-    // Rank and limit
+
     allSections.sort((a, b) => scoreContent(b.section_title) - scoreContent(a.section_title));
     allSections.forEach((sec, i) => sec.importance_rank = i + 1);
 
