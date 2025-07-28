@@ -2,13 +2,10 @@
 
 An intelligent document processing tool to extract **fillable form-related sections** from PDF files based on semantic analysis, keyword relevance, and refined text extraction — designed for **HR professionals** handling onboarding and compliance workflows.
 
----
 
 ##  Overview
 
 This solution analyzes a collection of PDFs to identify the most relevant sections and refined content pertaining to **form creation, digital signatures, and PDF interactivity**. It produces a structured `JSON` output optimized for downstream use like automated onboarding, audit readiness, or knowledge extraction.
-
----
 
 ##  What It Does
 
@@ -17,8 +14,6 @@ This solution analyzes a collection of PDFs to identify the most relevant sectio
 - **Outputs Clean JSON**:
   - Top 5 sections with titles and page numbers
   - Top 5 refined text snippets with page context
-
----
 
 ##  Project Structure
 
@@ -29,8 +24,6 @@ AdobeHackathon_1b/
 ├── collection3/
 └── README.md
 ```
-
----
 
 ##  Setup & Run
 
@@ -153,8 +146,6 @@ docker run --platform linux/arm64 -v $(pwd)/collection2:/app/collection2 pdf-pro
 docker run --platform linux/arm64 -v $(pwd)/collection3:/app/collection3 pdf-processor
 ```
 
----
-
 ##  Output Structure
 
 ```
@@ -183,8 +174,6 @@ docker run --platform linux/arm64 -v $(pwd)/collection3:/app/collection3 pdf-pro
 }
 ```
 
----
-
 ##  Keywords Used for Extraction
 
 ```
@@ -193,8 +182,6 @@ sign, signature, signatures, fill, create, convert, document, documents,
 PDF, Acrobat, manage, tools, prepare, export, share, e-signature, workflow,
 process, template
 ```
-
----
 
 ##  Features
 
@@ -205,16 +192,12 @@ process, template
 - **Dockerized** for consistent cross-platform deployment
 - **Multi-collection support** with configurable paths
 
----
-
 ##  Technologies Used
 
 - **Node.js**
 - **pdf-parse** (for text extraction)
 - **fs** and **path** (for file management)
 - **Docker** (for containerization)
-
----
 
 ##  Performance
 | Metric  | Achieved |
@@ -224,8 +207,6 @@ process, template
 | Memory Footprint | <150MB |
 | Platform | Cross-platform (Windows, Linux, macOS)|
 | Container Size | ~50MB (Alpine-based) |
-
----
 
 ##  Algorithm Deep Dive
 
@@ -264,8 +245,6 @@ page_number = Math.floor(totalPages * (lineIndex / totalLines)) + 1
 
 This gives a close approximation of where in the PDF the line appears.
 
----
-
 ## Error Handling & Validation
 
 **Graceful Degradation**
@@ -282,8 +261,6 @@ This gives a close approximation of where in the PDF the line appears.
 **Cleanup & Safety**
 - No file handles are left open.
 - All operations are synchronous or wrapped in async-await for consistency.
-
----
 
 ##  Smart Heuristics
 
@@ -302,15 +279,6 @@ This gives a close approximation of where in the PDF the line appears.
 - Pages with higher semantic density
 - Headings related to persona intent
 
----
-
-##  Created For
-
-**Adobe Hackathon – Round 1B**  
-Document Intelligence Challenge 2025
-
----
-
 ## Result Highlights
 
 ✅ Fast and lightweight JSON extractor for PDFs  
@@ -320,16 +288,18 @@ Document Intelligence Challenge 2025
 ✅ Multi-platform ARM64/AMD64 compatibility**  
 ✅ Configurable for multiple collections**
 
----
-
 ## Quick Start Commands
 
-# 1. Configure paths in index.js for your target collection
-# 2. Build Docker image
+#### 1. Configure paths in index.js for your target collection
+#### 2. Build Docker image
 ```
 docker build --platform linux/arm64 -t pdf-processor .
 ```
-# 3. Run for your collection (replace 'collection2' with target collection)
+#### 3. Run for your collection (replace 'collection2' with target collection)
 ```
 docker run --platform linux/arm64 -v $(pwd)/collection2:/app/collection2 pdf-processor
 ```
+
+**Built for Adobe Hackathon Round 1B - Document Intelligence Challenge**
+
+*Demonstrates advanced PDF processing techniques combining multiple libraries for robust document structure extraction and analysis.*
