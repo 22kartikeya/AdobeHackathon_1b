@@ -14,7 +14,8 @@ const { documents, persona, job_to_be_done } = inputConfig;
 
 const KEYWORDS = [
     "travel", "trip", "group", "friends", "hotel", "restaurant", "food",
-    "nightlife", "activity", "things to do", "packing", "coast", "fun", "adventure", "form", "forms", "fillable", "interactive", "field", "fields", "onboarding",
+    "nightlife", "activity", "things to do", "packing", "coast", "fun", "adventure",
+    "form", "forms", "fillable", "interactive", "field", "fields", "onboarding",
     "compliance", "sign", "signature", "signatures", "fill", "create", "convert",
     "document", "documents", "PDF", "Acrobat", "manage", "tools", "prepare",
     "export", "share", "e-signature", "workflow", "process", "template", "enable", "submit"
