@@ -81,18 +81,22 @@ collection1_output/final_output.json
 
 Before building the Docker image, update the paths in `index.js` according to your target collection:
 
+Example for collection1
 ```
-// Example for collection1
 const INPUT_JSON_PATH = "./collection1/challenge1b_input.json";
 const PDF_DIR = "./collection1/PDFs";
 const OUTPUT_DIR = "./collection1";
+```
 
-// Example for collection2
+Example for collection2
+```
 const INPUT_JSON_PATH = "./collection2/challenge1b_input.json";
 const PDF_DIR = "./collection2/PDFs";
 const OUTPUT_DIR = "./collection2";
+```
 
-// Example for collection3
+Example for collection3
+```
 const INPUT_JSON_PATH = "./collection3/challenge1b_input.json";
 const PDF_DIR = "./collection3/PDFs";
 const OUTPUT_DIR = "./collection3";
@@ -233,21 +237,8 @@ This Node.js solution uses a lightweight scoring algorithm to identify and rank 
 - Extracts plain text from PDF using pdf-parse.
 - Splits text into lines and analyzes them one by one.
 
-**Keyword Relevance Scoring**
-Uses a predefined list of HR-centric keywords:
-
-```
-const KEYWORDS = [
-    "travel", "trip", "group", "friends", "hotel", "restaurant", "food",
-    "nightlife", "activity", "things to do", "packing", "coast", "fun", "adventure",
-    "form", "forms", "fillable", "interactive", "field", "fields", "onboarding",
-    "compliance", "sign", "signature", "signatures", "fill", "create", "convert",
-    "document", "documents", "PDF", "Acrobat", "manage", "tools", "prepare",
-    "export", "share", "e-signature", "workflow", "process", "template", "enable", "submit"
-];
-```
-
 **For each line:**
+
 - Converts text to lowercase.
 - Counts keyword matches using regular expressions.
 - Increases score proportionally to keyword frequency.
@@ -325,20 +316,20 @@ Document Intelligence Challenge 2025
 ✅ Fast and lightweight JSON extractor for PDFs  
 ✅ Built for real-world HR and travel use cases  
 ✅ No external dependencies beyond pdf-parse  
-✅ **Fully containerized with Docker support**  
-✅ **Multi-platform ARM64/AMD64 compatibility**  
-✅ **Configurable for multiple collections**
+✅ Fully containerized with Docker support**  
+✅ Multi-platform ARM64/AMD64 compatibility**  
+✅ Configurable for multiple collections**
 
 ---
 
 ## Quick Start Commands
 
-```
 # 1. Configure paths in index.js for your target collection
 # 2. Build Docker image
-docker build --platform linux/arm64 -t pdf-processor .
-
-# 3. Run for your collection (replace 'collection2' with target collection)
-docker run --platform linux/arm64 -v $(pwd)/collection2:/app/collection2 pdf-processor
 ```
+docker build --platform linux/arm64 -t pdf-processor .
+```
+# 3. Run for your collection (replace 'collection2' with target collection)
+```
+docker run --platform linux/arm64 -v $(pwd)/collection2:/app/collection2 pdf-processor
 ```
