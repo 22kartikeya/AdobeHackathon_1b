@@ -7,11 +7,10 @@ const PDF_DIR = "./collection2_input";
 const OUTPUT_DIR = "./collection2_output";
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "final_output.json");
 
-// Load configuration
 const inputConfig = JSON.parse(fs.readFileSync(INPUT_JSON_PATH, "utf-8"));
 const { documents, persona, job_to_be_done } = inputConfig;
 
-// Define HR/Forms-related keywords
+
 const KEYWORDS = [
   "form", "forms", "fillable", "interactive", "field", "fields", "onboarding",
   "compliance", "sign", "signature", "signatures", "fill", "create", "convert",
@@ -43,7 +42,7 @@ async function extractFromPDF(filepath) {
   let currentSection = null;
   let sectionContent = [];
 
-  // For subsection_analysis: Buffer multiple related lines into paragraphs
+
   let buffer = [];
   let bufferScore = 0;
   let bufferPage = 1;
@@ -73,7 +72,7 @@ async function extractFromPDF(filepath) {
     const estimatedPage = Math.max(1, Math.floor((idx / lines.length) * data.numpages) + 1);
     const score = scoreContent(clean);
 
-    // Detect section headings
+
     const isHeading = (
       (clean.length > 10 && clean.length < 100 &&
         !clean.includes(".") && !clean.includes(",") &&
@@ -105,7 +104,7 @@ async function extractFromPDF(filepath) {
       sectionContent.push(clean);
     }
 
-    // For refined paragraph logic
+
     const containsFormVerb = /(form|fill|interactive|signature|prepare|sign|submit|enable|Acrobat|tools|PDF)/i.test(clean);
     if (score >= 1 && containsFormVerb && clean.length >= 40 && clean.length <= 300) {
       if (buffer.length === 0) bufferPage = estimatedPage;
@@ -116,10 +115,10 @@ async function extractFromPDF(filepath) {
     }
   });
 
-  // Final flush
+
   flushBuffer();
 
-  // Add last section
+
   if (currentSection && sectionContent.length > 0) {
     const combined = sectionContent.join(" ").trim();
     if (combined.length > 50) {
@@ -147,16 +146,16 @@ async function extractFromPDF(filepath) {
   for (const doc of documents) {
     const fullPath = path.join(PDF_DIR, doc.filename);
     if (!fs.existsSync(fullPath)) {
-      console.warn(`⚠ Missing file: ${fullPath}`);
+      console.warn(` Missing file: ${fullPath}`);
       continue;
     }
-    console.log(`📄 Processing: ${doc.filename}`);
+    console.log(` Processing: ${doc.filename}`);
     const { sections, detailedContent } = await extractFromPDF(fullPath);
     allSections.push(...sections);
     allDetailedContent.push(...detailedContent);
   }
 
-  // Sort by relevance
+
   allSections.sort((a, b) => b.score - a.score);
   allDetailedContent.sort((a, b) => b.score - a.score);
 
@@ -186,5 +185,5 @@ async function extractFromPDF(filepath) {
   };
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
-  console.log(`✅ Output written to ${OUTPUT_FILE}`);
+  console.log(`Output written to ${OUTPUT_FILE}`);
 })();
