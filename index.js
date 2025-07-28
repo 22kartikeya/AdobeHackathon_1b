@@ -2,15 +2,14 @@ const fs = require("fs");
 const path = require("path");
 const pdfParse = require("pdf-parse");
 
-const INPUT_JSON_PATH = "./collection2/challenge1b_input.json";
-const PDF_DIR = "./collection2/PDFs";
-const OUTPUT_DIR = "./collection2";
+// Here for example I have taken collection for this instance
+const INPUT_JSON_PATH = "./collection1/challenge1b_input.json"; // path should be the ""./collection_name/challenge1b_input.json"
+const PDF_DIR = "./collection3/PDFs"; // path should be the ""./collection_name/PDFs"
+const OUTPUT_DIR = "./collection3"; // path should be the ""./collection_name"
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "final_output.json");
-
 
 const inputConfig = JSON.parse(fs.readFileSync(INPUT_JSON_PATH, "utf-8"));
 const { documents, persona, job_to_be_done } = inputConfig;
-
 
 const KEYWORDS = [
     "travel", "trip", "group", "friends", "hotel", "restaurant", "food",
