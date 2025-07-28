@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const pdfParse = require("pdf-parse");
 
-const INPUT_JSON_PATH = "./collection1/challenge1b_input.json";
-const PDF_DIR = "./collection1/collection1_input";
-const OUTPUT_DIR = "./collection1/collection1_output";
+const INPUT_JSON_PATH = "./collection2/challenge1b_input.json";
+const PDF_DIR = "./collection2/PDFs";
+const OUTPUT_DIR = "./collection2";
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "final_output.json");
 
 
