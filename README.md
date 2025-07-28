@@ -1,6 +1,3 @@
-Here's the updated README.md file with Docker information added:
-
-```markdown
 #  Persona-Driven Document Intelligence
 
 An intelligent document processing tool to extract **fillable form-related sections** from PDF files based on semantic analysis, keyword relevance, and refined text extraction — designed for **HR professionals** handling onboarding and compliance workflows.
