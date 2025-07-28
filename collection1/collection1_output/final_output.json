@@ -11,7 +11,7 @@
     ],
     "persona": "Travel Planner",
     "job_to_be_done": "Plan a trip of 4 days for a group of 10 college friends.",
-    "processing_timestamp": "2025-07-28T13:33:29.552Z"
+    "processing_timestamp": "2025-07-28T15:38:51.712Z"
   },
   "extracted_sections": [
     {
@@ -21,26 +21,26 @@
       "page_number": 3
     },
     {
-      "document": "South of France - Restaurants and Hotels.pdf",
-      "section_title": "• La Colombe d'Or (Saint-Paul-de-Vence): A historic restaurant and hotel that has",
+      "document": "South of France - Cuisine.pdf",
+      "section_title": "like croissants, éclairs, and macarons. These workshops are a fun and interactive way",
       "importance_rank": 2,
-      "page_number": 5
+      "page_number": 8
     },
     {
       "document": "South of France - Restaurants and Hotels.pdf",
       "section_title": "• La Colombe d'Or (Saint-Paul-de-Vence): A historic restaurant and hotel that has",
       "importance_rank": 3,
+      "page_number": 5
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "section_title": "• La Colombe d'Or (Saint-Paul-de-Vence): A historic restaurant and hotel that has",
+      "importance_rank": 4,
       "page_number": 6
     },
     {
       "document": "South of France - Restaurants and Hotels.pdf",
       "section_title": "• Hotel Le Saint Paul (Nice): A charming hotel located in a historic building , offering",
-      "importance_rank": 4,
-      "page_number": 8
-    },
-    {
-      "document": "South of France - Restaurants and Hotels.pdf",
-      "section_title": "• Hotel des Arts (Montpellier): A budget-friendly hotel located in the heart of",
       "importance_rank": 5,
       "page_number": 8
     }
@@ -50,6 +50,11 @@
       "document": "South of France - Cities.pdf",
       "refined_text": "• Boat Trip to the Calanques: Take a boat trip to the Calanques, a series of stunning",
       "page_number": 3
+    },
+    {
+      "document": "South of France - Cuisine.pdf",
+      "refined_text": "like croissants, éclairs, and macarons. These workshops are a fun and interactive way",
+      "page_number": 8
     },
     {
       "document": "South of France - Restaurants and Hotels.pdf",
@@ -64,11 +69,6 @@
     {
       "document": "South of France - Restaurants and Hotels.pdf",
       "refined_text": "• Hotel Le Saint Paul (Nice): A charming hotel located in a historic building , offering",
-      "page_number": 8
-    },
-    {
-      "document": "South of France - Restaurants and Hotels.pdf",
-      "refined_text": "• Hotel des Arts (Montpellier): A budget-friendly hotel located in the heart of",
       "page_number": 8
     }
   ]

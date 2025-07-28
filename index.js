@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const pdfParse = require("pdf-parse");
 
-const INPUT_JSON_PATH = "./challenge1b_input.json";
-const PDF_DIR = "./collection3_input";
-const OUTPUT_DIR = "./collection3_output";
+const INPUT_JSON_PATH = "./collection1/challenge1b_input.json";
+const PDF_DIR = "./collection1/collection1_input";
+const OUTPUT_DIR = "./collection1/collection1_output";
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "final_output.json");
 
 
@@ -14,7 +14,10 @@ const { documents, persona, job_to_be_done } = inputConfig;
 
 const KEYWORDS = [
     "travel", "trip", "group", "friends", "hotel", "restaurant", "food",
-    "nightlife", "activity", "things to do", "packing", "coast", "fun", "adventure"
+    "nightlife", "activity", "things to do", "packing", "coast", "fun", "adventure", "form", "forms", "fillable", "interactive", "field", "fields", "onboarding",
+    "compliance", "sign", "signature", "signatures", "fill", "create", "convert",
+    "document", "documents", "PDF", "Acrobat", "manage", "tools", "prepare",
+    "export", "share", "e-signature", "workflow", "process", "template", "enable", "submit"
 ];
 
 function scoreContent(text) {
@@ -67,6 +70,7 @@ async function extractFromPDF(filepath) {
         allSections.push(...sections);
     }
 
+
     allSections.sort((a, b) => scoreContent(b.section_title) - scoreContent(a.section_title));
     allSections.forEach((sec, i) => sec.importance_rank = i + 1);
 
@@ -93,5 +97,5 @@ async function extractFromPDF(filepath) {
     };
 
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
-    console.log(`Output written to ${OUTPUT_FILE}`);
+    console.log(` Output written to ${OUTPUT_FILE}`);
 })();

@@ -19,65 +19,65 @@
     ],
     "persona": "HR professional",
     "job_to_be_done": "Create and manage fillable forms for onboarding and compliance.",
-    "processing_timestamp": "2025-07-28T13:28:27.516Z"
+    "processing_timestamp": "2025-07-28T15:33:31.213Z"
   },
   "extracted_sections": [
     {
-      "document": "Learn Acrobat - Request e-signatures_2.pdf",
-      "section_title": "signature fields and certifies it, allowing users to only change form fields and sign the",
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "It displays the Fill & Sign tools in the left pane. You can now fill in the form fields and sign the",
       "importance_rank": 1,
-      "page_number": 6
-    },
-    {
-      "document": "Learn Acrobat - Fill and Sign.pdf",
-      "section_title": "Fill and Sign PDF Forms",
-      "importance_rank": 2,
-      "page_number": 1
-    },
-    {
-      "document": "Learn Acrobat - Fill and Sign.pdf",
-      "section_title": "Fill and sign PDF forms",
-      "importance_rank": 3,
       "page_number": 2
     },
     {
       "document": "Learn Acrobat - Fill and Sign.pdf",
-      "section_title": "Fill in interactive forms",
-      "importance_rank": 4,
-      "page_number": 8
+      "section_title": "To create an interactive form, use the Prepare Forms tool. See Create a form from an existing",
+      "importance_rank": 2,
+      "page_number": 11
     },
     {
       "document": "Learn Acrobat - Fill and Sign.pdf",
-      "section_title": "Auto-Complete forms (interactive forms",
+      "section_title": "You can easily fill, sign, and share your documents using Acrobat's Fill & Sign tool. Types",
+      "importance_rank": 3,
+      "page_number": 1
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "section_title": "• Select File > Share > Create PDF and share link > Create PDF and Share link.",
+      "importance_rank": 4,
+      "page_number": 14
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "interactive fillable forms. Or, they intentionally design a form that you can fill in only by hand",
       "importance_rank": 5,
-      "page_number": 9
+      "page_number": 8
     }
   ],
   "subsection_analysis": [
     {
       "document": "Learn Acrobat - Fill and Sign.pdf",
-      "refined_text": "• Interactive forms: These contain fields that you can select and fill in. • Flat forms: These do not have interactive fields. It could be a paper form or PDF that hasn’t been optimized for form filling. The Fill & Sign tool automatically detects the form fields like text fields, comb fields, checkboxes, and radio buttons. You can manually add text and other symbols anywhere on the form using the Fill & Sign tool if",
+      "refined_text": "It displays the Fill & Sign tools in the left pane. You can now fill in the form fields and sign the",
       "page_number": 2
     },
     {
       "document": "Learn Acrobat - Fill and Sign.pdf",
-      "refined_text": "To complete and sign PDF forms, open the form in Acrobat and then select E-  Sign from the global bar. Alternatively, you can select All tools > Fill & Sign. It displays the Fill & Sign tools in the left pane. You can now fill in the form fields and sign the form using the sign tools described in the following topics.",
-      "page_number": 2
-    },
-    {
-      "document": "Learn Acrobat - Fill and Sign.pdf",
-      "refined_text": "Not all forms are fillable. Sometimes form creators don’t convert their PDFs to interactive fillable forms. Or, they intentionally design a form that you can fill in only by hand or with the Fill & Sign tool. These non-interactive forms are called flat forms.",
-      "page_number": 8
-    },
-    {
-      "document": "Learn Acrobat - Fill and Sign.pdf",
-      "refined_text": "Change flat forms to fillable (Acrobat Pro) You can change a flat form to a fillable form by either using the Prepare Form tool or enabling the Fill & Sign tools. Acrobat and Acrobat Reader users can use the Fill & Sign tool",
+      "refined_text": "To create an interactive form, use the Prepare Forms tool. See Create a form from an existing",
       "page_number": 11
     },
     {
       "document": "Learn Acrobat - Fill and Sign.pdf",
-      "refined_text": "You can sign a document to attest to its   contents or approve the document. This document explains how to sign a document or agreement using Acrobat or Reader desktop application. To sign a PDF document or form, you can type, draw, or insert an image of your handwritten signature. You can also add text, such as your name, company, title, or date. When you save the document, the signature and text become part of the PDF.",
+      "refined_text": "You can easily fill, sign, and share your documents using Acrobat's Fill & Sign tool. Types",
+      "page_number": 1
+    },
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "refined_text": "• Select File > Share > Create PDF and share link > Create PDF and Share link.",
       "page_number": 14
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "refined_text": "interactive fillable forms. Or, they intentionally design a form that you can fill in only by hand",
+      "page_number": 8
     }
   ]
 }
